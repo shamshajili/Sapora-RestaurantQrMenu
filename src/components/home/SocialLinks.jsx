@@ -1,8 +1,10 @@
 import { FiInstagram, FiLink } from "react-icons/fi";
 import { useState } from "react";
+import { useLanguage } from "../../context/LanguageContext";
 
 const SocialLinks = () => {
   const [copied, setCopied] = useState(false);
+  const { t } = useLanguage();
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(window.location.href);
@@ -26,9 +28,7 @@ const SocialLinks = () => {
       </button>
 
       {copied && (
-        <span className="text-sm md:text-base text-[#C9A24D] ml-1">
-          Kopyalandı
-        </span>
+        <span className="text-sm md:text-base text-[#C9A24D] ml-1">{t.copied}</span>
       )}
 
     </div>
