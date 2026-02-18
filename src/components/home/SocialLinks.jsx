@@ -11,25 +11,26 @@ const SocialLinks = () => {
   };
 
   return (
-    <div className="flex items-center justify-center gap-3 mt-1">
+    <div className="flex items-center justify-center gap-2 md:gap-4 mt-1 md:mt-2">
 
       <a
         href="https://instagram.com/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FiInstagram className="text-[#C9A24D] text-2xl" />
+        <FiInstagram className="text-[#C9A24D] w-6 h-6 md:w-8 md:h-8" />
       </a>
 
       <button onClick={handleCopy}>
-        <FiLink className="text-[#C9A24D] text-2xl" />
+        <FiLink className="text-[#C9A24D] w-6 h-6 md:w-8 md:h-8" />
       </button>
 
       {copied && (
-        <span className="text-xs text-[#C9A24D] ml-1">
+        <span className="text-sm md:text-base text-[#C9A24D] ml-1">
           Kopyalandı
         </span>
       )}
+
     </div>
   );
 };

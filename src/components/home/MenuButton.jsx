@@ -1,16 +1,19 @@
 const MenuButton = ({ onClick }) => {
   return (
     <button
+      onClick={onClick}
       className="
         w-full
-        h-12
+        h-11 md:h-14
         rounded-2xl
         border border-neutral-300/40 dark:border-neutral-600/40
         bg-white/70 dark:bg-neutral-800/70
         backdrop-blur
         transition
-        text-base
+        text-base md:text-lg
+        focus:outline-none focus:ring-2 focus:ring-neutral-400/40
       "
+      aria-label="Menyuya keçin"
     >
       <span className="
         bg-gradient-to-r
@@ -28,3 +31,4 @@ const MenuButton = ({ onClick }) => {
 };
 
 export default MenuButton;
+ 
