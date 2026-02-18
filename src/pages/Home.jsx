@@ -18,7 +18,7 @@ const Home = () => {
 
     {/* CENTER */}
     <div className="flex flex-col items-center gap-5 md:gap-4">
-      <div className="w-full h-[260px] md:h-[420px] lg:h-[520px] rounded-3xl overflow-hidden shadow-lg">
+      <div className="w-full h-[200px] md:h-[420px] lg:h-[520px] rounded-3xl overflow-hidden shadow-lg">
         <img
           src={sapora}
           alt="Sapora cover"
