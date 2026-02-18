@@ -7,46 +7,26 @@ const SocialLinks = () => {
   const handleCopy = async () => {
     await navigator.clipboard.writeText(window.location.href);
     setCopied(true);
-    setTimeout(() => setCopied(false), 1500);
+    setTimeout(() => setCopied(false), 1200);
   };
 
   return (
-    <div className="flex items-center justify-center gap-8 md:gap-6 mt-2">
+    <div className="flex items-center justify-center gap-3 mt-1">
 
       <a
         href="https://instagram.com/"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Instagram"
-        className="transition duration-200 hover:scale-110"
       >
-        <FiInstagram
-          className="
-            text-[#C9A24D]            
-            hover:text-[#E6C97A]        
-            transition
-            text-2xl md:text-[22px]
-          "
-        />
+        <FiInstagram className="text-[#C9A24D] text-2xl" />
       </a>
 
-      <button
-        onClick={handleCopy}
-        aria-label="Linki kopyala"
-        className="transition duration-200 hover:scale-110 focus:outline-none"
-      >
-        <FiLink
-          className="
-            text-[#C9A24D]            
-            hover:text-[#E6C97A]
-            transition
-            text-2xl md:text-[22px]
-          "
-        />
+      <button onClick={handleCopy}>
+        <FiLink className="text-[#C9A24D] text-2xl" />
       </button>
 
       {copied && (
-        <span className="text-sm md:text-xs text-[#C9A24D] tracking-wide">
+        <span className="text-xs text-[#C9A24D] ml-1">
           Kopyalandı
         </span>
       )}
