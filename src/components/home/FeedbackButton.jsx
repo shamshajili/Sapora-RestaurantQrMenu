@@ -1,4 +1,8 @@
+import { useLanguage } from "../../context/LanguageContext";
+
 const FeedbackButton = ({ onClick }) => {
+  const { t } = useLanguage();
+
   return (
     <button
       onClick={onClick}
@@ -19,7 +23,7 @@ const FeedbackButton = ({ onClick }) => {
         dark:border-white/10
         dark:shadow-none
       "
-      aria-label="Rəy bildirin"
+      aria-label={t.feedback}
     >
       <span
         className="
@@ -32,7 +36,7 @@ const FeedbackButton = ({ onClick }) => {
           font-medium
         "
       >
-        Rəy bildirin
+        {t.feedback}
       </span>
     </button>
   );

@@ -1,4 +1,8 @@
+import { useLanguage } from "../../context/LanguageContext";
+
 const MenuButton = ({ onClick }) => {
+  const { t } = useLanguage();
+
   return (
     <button
       onClick={onClick}
@@ -19,7 +23,7 @@ const MenuButton = ({ onClick }) => {
         dark:border-white/10
         dark:shadow-none
       "
-      aria-label="Menuya baxın"
+      aria-label={t.menu}
     >
       <span
         className="
@@ -32,7 +36,7 @@ const MenuButton = ({ onClick }) => {
           font-medium
         "
       >
-        Menuya baxın
+        {t.menu}
       </span>
     </button>
   );

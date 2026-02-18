@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLanguage } from "../../context/LanguageContext";
 import { FiChevronDown } from "react-icons/fi";
 
 import azFlag from "../../assets/images/az.png";
@@ -13,7 +14,8 @@ const languages = [
 
 const LanguageSelect = () => {
   const [open, setOpen] = useState(false);
-  const [current, setCurrent] = useState(languages[0]);
+  const { lang, setLang } = useLanguage();
+  const current = languages.find((l) => l.code === lang) || languages[0];
 
   return (
     <div className="relative">
@@ -50,7 +52,7 @@ const LanguageSelect = () => {
             <button
               key={lang.code}
               onClick={() => {
-                setCurrent(lang);
+                setLang(lang.code);
                 setOpen(false);
               }}
               className="
