@@ -20,10 +20,10 @@ const Home = () => {
         <div className="w-full px-2">
           <div
             className="
-              w-full                 /* mobile full width */
-              h-[480px]              /* mobile → BÖYÜK */
+              w-full                 
+              h-[480px]              
               sm:h-[420px]
-              md:h-[400px]           /* desktop → kiçik */
+              md:h-[400px]           
               lg:h-[320px]
               md:max-w-md
               lg:max-w-sm
@@ -46,7 +46,7 @@ const Home = () => {
       {/* Bottom */}
       <div className="w-full max-w-xl mx-auto flex flex-col gap-4 px-2 mb-4">
         <FeedbackButton />
-        <MenuButton />
+        <MenuButton onClick={() => console.log("Menu")} />
         <SocialLinks />
       </div>
 
