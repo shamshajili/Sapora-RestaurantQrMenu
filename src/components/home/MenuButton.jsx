@@ -3,27 +3,35 @@ const MenuButton = ({ onClick }) => {
     <button
       onClick={onClick}
       className="
-        w-full
-        h-11 md:h-14
+        w-full h-12
         rounded-2xl
-        border border-neutral-300/40 dark:border-neutral-600/40
-        bg-white/70 dark:bg-neutral-800/70
+        transition-all duration-200
         backdrop-blur
-        transition
-        text-base md:text-lg
-        focus:outline-none focus:ring-2 focus:ring-neutral-400/40
+        active:scale-[0.98]
+
+        /* LIGHT MODE */
+        bg-[#FFFCF6]
+        border border-[#E6D3A3]
+        shadow-[0_4px_12px_rgba(201,162,77,0.15)]
+
+        /* DARK MODE */
+        dark:bg-neutral-800/70
+        dark:border-white/10
+        dark:shadow-none
       "
-      aria-label="Menyuya keçin"
+      aria-label="Menuya baxın"
     >
-      <span className="
-        bg-gradient-to-r
-        from-[#F5E6B3]
-        via-[#C9A24D]
-        to-[#8F6B1F]
-        bg-clip-text
-        text-transparent
-        font-medium
-      ">
+      <span
+        className="
+          bg-gradient-to-r
+          from-[#E9C46A]
+          via-[#C9A24D]
+          to-[#9C7A2F]
+          bg-clip-text
+          text-transparent
+          font-medium
+        "
+      >
         Menuya baxın
       </span>
     </button>
@@ -31,4 +39,3 @@ const MenuButton = ({ onClick }) => {
 };
 
 export default MenuButton;
- 

@@ -7,40 +7,46 @@ import sapora from "../assets/images/Sapora.jpeg";
 
 const Home = () => {
   return (
-  <div className="min-h-screen bg-neutral-900 text-white px-4 py-6 flex justify-center">
-  <div className="w-full max-w-md md:max-w-4xl flex flex-col justify-between">
+    <div
+      className="
+        min-h-screen
+        flex justify-center
+        px-4 py-6
+        transition-colors
 
-    {/* TOP */}
-    <div className="flex justify-between mb-6 md:mb-4">
-      <ThemeToggle />
-      <LanguageSelect />
-    </div>
+        bg-[#F5F1E8] text-neutral-900
+        dark:bg-neutral-900 dark:text-white
+      "
+    >
+      <div className="w-full max-w-md flex flex-col justify-between">
 
-    {/* CENTER */}
-    <div className="flex flex-col items-center gap-5 md:gap-4">
-      <div className="w-full h-[200px] md:h-[420px] lg:h-[520px] rounded-3xl overflow-hidden shadow-lg">
-        <img
-          src={sapora}
-          alt="Sapora cover"
-          className="w-full h-full object-cover"
-        />
+        {/* TOP */}
+        <div className="flex justify-between mb-6">
+          <ThemeToggle />
+          <LanguageSelect />
+        </div>
+
+        {/* CENTER */}
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-full h-[200px] rounded-3xl overflow-hidden shadow-lg">
+            <img src={sapora} className="w-full h-full object-cover" />
+          </div>
+
+          <div className="w-full flex flex-col gap-3">
+            <FeedbackButton />
+            <MenuButton />
+          </div>
+        </div>
+
+        {/* BOTTOM */}
+        <div className="flex justify-center mt-4">
+          <SocialLinks />
+        </div>
+
       </div>
-
-      <div className="w-full flex flex-col gap-4 md:gap-3">
-        <FeedbackButton />
-        <MenuButton />
-      </div>
     </div>
-
-    {/* BOTTOM */}
-    <div className="flex justify-center mt-5 md:mt-4">
-      <SocialLinks />
-    </div>
-
-  </div>
-</div>
-
   );
 };
+
 
 export default Home;
