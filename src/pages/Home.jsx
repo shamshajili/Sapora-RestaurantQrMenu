@@ -7,24 +7,22 @@ import sapora from "../assets/images/Sapora.jpeg";
 
 const Home = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-between px-4 py-6 bg-white dark:bg-neutral-900 transition-colors text-white">
+    <div className="min-h-screen bg-white dark:bg-neutral-900 transition-colors text-white px-4 py-4">
 
-      {/* Top */}
-      <div className="w-full max-w-xl mx-auto flex justify-between items-center">
-        <ThemeToggle />
-        <LanguageSelect />
+      <div className="w-full max-w-xl mx-auto flex justify-between items-center mb-4">
+        <ThemeToggle size="lg" />
+        <LanguageSelect size="lg" />
       </div>
 
-      {/* IMAGE */}
-      <div className="flex-1 flex items-center justify-center">
-        <div className="w-full px-2">
+      <div className="flex justify-center mb-5">
+        <div className="w-full px-1">
           <div
             className="
-              w-full                 
-              h-[480px]              
-              sm:h-[420px]
-              md:h-[400px]           
-              lg:h-[320px]
+              w-full
+              h-[420px]             
+              sm:h-[380px]
+              md:h-[360px]
+              lg:h-[300px]
               md:max-w-md
               lg:max-w-sm
               mx-auto
@@ -43,8 +41,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Bottom */}
-      <div className="w-full max-w-xl mx-auto flex flex-col gap-4 px-2 mb-4">
+      <div className="w-full max-w-xl mx-auto flex flex-col gap-3 px-1">
         <FeedbackButton />
         <MenuButton onClick={() => console.log("Menu")} />
         <SocialLinks />

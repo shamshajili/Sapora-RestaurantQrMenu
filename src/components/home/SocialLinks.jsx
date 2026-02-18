@@ -11,7 +11,7 @@ const SocialLinks = () => {
   };
 
   return (
-    <div className="flex items-center justify-center gap-6 mt-2">
+    <div className="flex items-center justify-center gap-8 md:gap-6 mt-2">
 
       <a
         href="https://instagram.com/"
@@ -21,11 +21,11 @@ const SocialLinks = () => {
         className="transition duration-200 hover:scale-110"
       >
         <FiInstagram
-          size={22}
           className="
-            text-[#C9A24D]              /* GOLD */
-            hover:text-[#E6C97A]        /* lighter gold hover */
+            text-[#C9A24D]            
+            hover:text-[#E6C97A]        
             transition
+            text-2xl md:text-[22px]
           "
         />
       </a>
@@ -36,17 +36,17 @@ const SocialLinks = () => {
         className="transition duration-200 hover:scale-110 focus:outline-none"
       >
         <FiLink
-          size={22}
           className="
-            text-[#C9A24D]              /* GOLD */
+            text-[#C9A24D]            
             hover:text-[#E6C97A]
             transition
+            text-2xl md:text-[22px]
           "
         />
       </button>
 
       {copied && (
-        <span className="text-xs text-[#C9A24D] tracking-wide">
+        <span className="text-sm md:text-xs text-[#C9A24D] tracking-wide">
           Kopyalandı
         </span>
       )}

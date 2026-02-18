@@ -4,7 +4,7 @@ const FeedbackButton = ({ onClick }) => {
       onClick={onClick}
       className="
         w-full
-        h-14
+        h-16 md:h-14
         rounded-2xl
         border border-neutral-300/40 dark:border-neutral-600/40
         bg-white/70 dark:bg-neutral-800/70
@@ -16,6 +16,7 @@ const FeedbackButton = ({ onClick }) => {
         active:scale-[0.98]
         hover:bg-white dark:hover:bg-neutral-700
         focus:outline-none focus:ring-2 focus:ring-neutral-400/40
+        text-lg md:text-base
       "
       aria-label="Menyuya keçin"
     >
