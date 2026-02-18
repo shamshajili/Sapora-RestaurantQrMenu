@@ -7,41 +7,44 @@ import sapora from "../assets/images/Sapora.jpeg";
 
 const Home = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-between px-4 py-4 bg-white dark:bg-neutral-900 transition-colors">
+    <div className="min-h-screen flex flex-col justify-between px-4 py-6 bg-white dark:bg-neutral-900 transition-colors text-white">
 
-      {/* Top controls */}
-      <div className="w-full flex items-center justify-between max-w-md">
+      {/* Top */}
+      <div className="w-full max-w-xl mx-auto flex justify-between items-center">
         <ThemeToggle />
         <LanguageSelect />
       </div>
 
-      {/* Logo / Cover */}
-        <div className="flex flex-col items-center justify-center flex-1 w-full">
-          <div className="w-full px-2 sm:max-w-md">
-            <div
-              className="
-                w-full
-                h-80
-                sm:h-64
-                md:h-72
-                rounded-3xl
-                overflow-hidden
-                shadow-xl
-                dark:shadow-black/50
-              "
-            >
-              <img
-                src={sapora}
-                alt="Sapora cover"
-                className="w-full h-full object-cover"
-              />
-            </div>
+      {/* IMAGE */}
+      <div className="flex-1 flex items-center justify-center">
+        <div className="w-full px-2">
+          <div
+            className="
+              w-full                 /* mobile full width */
+              h-[480px]              /* mobile → BÖYÜK */
+              sm:h-[420px]
+              md:h-[400px]           /* desktop → kiçik */
+              lg:h-[320px]
+              md:max-w-md
+              lg:max-w-sm
+              mx-auto
+              rounded-3xl
+              overflow-hidden
+              shadow-lg
+              dark:shadow-black/40
+            "
+          >
+            <img
+              src={sapora}
+              alt="Sapora cover"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
+      </div>
 
-
-      {/* Bottom section */}
-      <div className="w-full max-w-md flex flex-col gap-4 mb-4">
+      {/* Bottom */}
+      <div className="w-full max-w-xl mx-auto flex flex-col gap-4 px-2 mb-4">
         <FeedbackButton />
         <MenuButton />
         <SocialLinks />
